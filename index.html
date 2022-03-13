@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer ">
+            <div class="timer-text containers">
+                <h2>Countdown Timer</h2>
+                <p>Let the Countdown Begin</p>
+            </div>
+            <!-- <div class=" set-timer containers">
+                <input type="text" placeholder="Set Time in Hours" class="set-timer-input">
+                <input type="button" value="Set Timer" class="set-timer-btn">
+            </div> -->
+            <div class="timer-count  containers">
+                <section>
+                    <input type="number" name="" class="parasize" id="timer-count-days" max="366" min="0" value="0">
+                    <!-- <p class="parasize timer-count-days">00</p> -->
+                    <p><small>Days</small></p>
+                </section>
+                <span class="parasize">:</span>
+
+                <section>
+                    <input type="number" name="" class="parasize" id="timer-count-hours" max="24" min="0" value="0">
+                    <!-- <p class="parasize timer-count-hours">00</p> -->
+                    <p><small>Hours</small></p>
+                </section>
+                <span class="parasize">:</span>
+
+                <section>
+                    <input type="number" name="" class="parasize" id="timer-count-mins" max="60" min="0" value="0">
+                    <!-- <p class="parasize timer-count-mins">00</p> -->
+                    <p><small>Minutes</small></p>
+                </section>
+                <span class="parasize">:</span>
+
+                <section>
+                    <input type="number" name="" class="parasize" id="timer-count-secs" max="60" min="0" value="0">
+                    <!-- <p class="parasize timer-count-secs">00</p> -->
+                    <p><small>Seconds</small></p>
+                </section>
+                
+            </div>
+            <div class="timer-btn containers">
+                <input type="button" value="Start" id="start">
+                <input type="button" value="Stop" id="stop">
+                <input type="button" value="Reset" id="reset">
+             </div>
+        </div>
+        
+    </div>
+    
+
+      <script src="script.js"></script>
+</body>
+</html>
