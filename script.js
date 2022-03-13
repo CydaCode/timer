@@ -1,7 +1,6 @@
 
 // Gobal variable
 
-const congrats_el = document.querySelector(".timer");
 const time_el = document.querySelector(".timer-count");
 const time_days = document.querySelector("#timer-count-days");
 const time_hours = document.querySelector("#timer-count-hours");
@@ -49,7 +48,7 @@ function timer() {
         time_days.value--;
     }
     return
-} alert("your timer is completed")
+}
 
 
 
