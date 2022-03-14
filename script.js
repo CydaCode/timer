@@ -1,6 +1,6 @@
 
 // Gobal variable
-
+const ti_el = document.querySelector("timer");
 const time_el = document.querySelector(".timer-count");
 const time_days = document.querySelector("#timer-count-days");
 const time_hours = document.querySelector("#timer-count-hours");
@@ -32,10 +32,12 @@ let t = time_days.value = 0;
         time_mins.value = 0;
         time_secs.value = 0;
 
+timer()
+
 function timer() {
     if(time_days.value === 0 && time_hours.value === 0 && time_mins.value === 0 && time_secs.value === 0) {
         t === true
-    } else if(time_secs.value != 0 ) {
+    } else if(time_secs.value != 0) {
         time_secs.value--
     } else if(time_mins.value != 0 && time_secs.value == 0) {
         time_secs.value = 59;
@@ -50,19 +52,44 @@ function timer() {
     return
 }
 
+function congratulations () {
 
+    time_el.classList.remove("timer-count")
+    con_text_el = document.createElement("div")
+    con_text_el.classList.add("con")
 
+    con_h = document.createElement("h1")
+    con_h.classList.add("con-text")
+    con_h.innerText = "Hey!! TIME IS UP"
+    con_text_el.appendChild(con_h)
+
+    time_el.appendChild(con_text_el);
+}
 
 function start() {
     if (interval) {
         return
     }
-    interval = setInterval(timer, 1000);
-}
+    interval = setInterval(timer, 1000)
+    // .then(() => {return (congratulations, 1000)
+    // .then(() => {
+    //     alert("Please set timer")
+    // })
+    // });
+    time_days.setAttribute("readonly", "readonly")
+    time_hours.setAttribute("readonly", "readonly")
+    time_mins.setAttribute("readonly", "readonly")
+    time_secs.setAttribute("readonly", "readonly")
+       
+        }
+            
+    
+
 
 function stop() {
     clearInterval(interval);
     interval = null
+    
 }
 
 function reset() {
@@ -71,6 +98,10 @@ function reset() {
     time_hours.value = 00;
     time_mins.value = 00;
     time_secs.value = 00;
+    time_days.removeAttribute("readonly", "readonly")
+    time_hours.removeAttribute("readonly", "readonly")
+    time_mins.removeAttribute("readonly", "readonly")
+    time_secs.removeAttribute("readonly", "readonly")
 }
 
 time_el.addEventListener("keypress", (e) => {

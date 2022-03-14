@@ -139,6 +139,27 @@
     color: aliceblue;
 }
 
+.con {
+    background-image: url(/timer/fire.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    max-width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+}
+.con-text {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14rem;
+    color: white;
+    
+}
+
 @media (min-width: 860px) {
     .timer-count input {
         background-color: transparent;
