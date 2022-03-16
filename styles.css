@@ -58,18 +58,21 @@
 .timer-count {
     border: 1px solid #fff;
     border-radius: 3px;
-    display:grid;
+    display:flex;
     grid-template-columns: repeat(7, 1fr);
-    margin-top: -5rem;
+    margin-top: -6rem;
+    justify-content: center;
     padding: 3rem 1rem;
     text-align: center;
+    
 }
 
-.timer-count input {
+.counter-time  {
     background-color: transparent;
     text-align: center;
+    
     color: white;
-    font-size: 1rem;
+    font-size: 2.1rem;
 }
 
 .parasize {
@@ -108,22 +111,22 @@
     display: flex;
 }
 
-/* .set-timer-input {
-    padding: 0.9rem;
+ .set-timer-input {
+    padding: 0.2rem ;
     border-radius: 0.3rem;
     outline: none;
     font-size: 1rem;
     border: none;
-} */
+} 
 
-.timer-count input:focus {
+.set-timer-input:focus {
     background-color: #201e1e;
     color: #fff;
     font-size: 1.09rem;
 }
 
 .set-timer-btn {
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.3rem;
     background-color: aliceblue;
     font-size: 1rem;
@@ -139,26 +142,8 @@
     color: aliceblue;
 }
 
-.con {
-    background-image: url(/timer/fire.jpg);
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    max-width: 100%;
-    height: 100vh;
-    opacity: 0.9;
-}
-.con-text {
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding-top: 14rem;
-    color: white;
-    
-}
+
+
 
 @media (min-width: 860px) {
     .timer-count input {
@@ -168,9 +153,6 @@
         font-size: 2.5rem;
     }
     
-    .parasize {
-        font-size: 2.2rem;
-    }
 
     .timer-count input:focus {
         background-color: #201e1e;
@@ -179,18 +161,34 @@
     }
     .timer-btn {
         text-align: center;
-        margin-top: 5rem;
+        margin-top: -1rem;
         
     }
     .timer-count {
         border: 1px solid #fff;
         border-radius: 3px;
-        display:grid;
+        display:flex;
         grid-template-columns: repeat(7, 1fr);
-        margin-top: 5rem;
-        padding: 3rem 1rem;
+        margin-top: -3rem;
+        padding: 3rem rem;
         text-align: center;
     }
     
+    .set-timer {
+        margin-top: 2rem;
+        display: flex;
+       
+    }
     
+     .set-timer-input {
+        padding: 0.2rem ;
+        border-radius: 0.3rem;
+        outline: none;
+        font-size: rem;
+        border: none;
+    } 
+    .counter-time {
+        font-size: 2.8rem;
+        /* padding: 0.2rem 9rem; */
+    }
 }
