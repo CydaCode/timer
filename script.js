@@ -25,9 +25,10 @@ window.addEventListener("load", () => {
             alert("Please Set a Time"); 
             return;
         } 
-      
+       
         let counter = Number(task) * 3600;
         let interval = null;
+        
 
         // Event Listeners
 
@@ -57,12 +58,18 @@ window.addEventListener("load", () => {
 
             if (counter <= 0 || counter <1) {
                 congr();
-                clearInterval(interval);
+                sound.play()
+                clearInterval(interval); 
                 
-            }
+            } 
             input.value =""
             
+           
         }
+
+        let sound = new
+            Audio("mysounds.wav")
+            sound.currentTime = 0
 
         function congr() {
             count_el.innerText = "TIME OUT"
@@ -70,30 +77,38 @@ window.addEventListener("load", () => {
         }
 
         function start() {
+            
             if (interval) {
                 return
             }
+            
             interval = setInterval(timer, 1000)
+            
         }
 
         function stop() {
                 clearInterval(interval);
                 interval = null
+                
+                
         }
 
         function reset() {
                 stop();
-                counter = 0
                 count_el.innerText = "00h : 00m : 00s"
+                sound.pause()
+                sound = null
+                counter = 0
         }
 
+        
         input.addEventListener("keypress", (e) => {
                 if(e.key === "Enter") {
                     start()
                 }
             })
 
-        
+        interval = null;
 
     })
 

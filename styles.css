@@ -60,7 +60,7 @@
     border-radius: 3px;
     display:flex;
     grid-template-columns: repeat(7, 1fr);
-    margin-top: -6rem;
+    margin-top: -5rem;
     justify-content: center;
     padding: 3rem 1rem;
     text-align: center;
@@ -169,7 +169,7 @@
         border-radius: 3px;
         display:flex;
         grid-template-columns: repeat(7, 1fr);
-        margin-top: -3rem;
+        margin-top: -2rem;
         padding: 3rem rem;
         text-align: center;
     }
